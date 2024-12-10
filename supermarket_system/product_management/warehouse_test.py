@@ -49,3 +49,9 @@ class TestWarehouse(unittest.TestCase):
         self.assertIn("001", self.warehouse.products)
         self.assertIn("002", self.warehouse.products)
 
+
+def run_tests():
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestWarehouse)
+    unittest.TextTestRunner(verbosity=2).run(suite)
+
+run_tests()
